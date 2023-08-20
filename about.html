@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komunitas Hengker</title>
+</head>
+<body>
+    <nav class="navigasi">
+        <a href="" id="ilang" class="tombol">Home</a>
+        <a href="about.html" class="tombol">About</a>
+        <a href="form.html" class="tombol">Daftar</a>
+    </nav>
+    <header style="margin-top: 2cm;">
+        <h1>Komunitas Hengker: Memahami Keamanan Digital dengan Profesionalisme dan Etika</h1>
+    </header>
+    <section>
+        <h2>Pengenalan Komunitas Hengker</h2>
+        <p>Hengker, singkatan dari "Hacker Ethical Network for Global Knowledge and Education and Research", adalah sebuah komunitas di dunia maya yang terlibat dalam keamanan siber dan etika digital.</p>
+    </section>
+    <section>
+        <h2>Etika dan Tujuan</h2>
+        <p>Hengker bertujuan untuk meningkatkan kesadaran akan risiko keamanan digital dan memberikan perlindungan terhadap individu dan perusahaan dari ancaman siber. Mereka menjalankan tindakan mereka dengan etika dan moral yang tinggi.</p>
+    </section>
+    <section>
+        <h2>Keahlian dan Keanggotaan</h2>
+        <p>Anggota Hengker memiliki keahlian beragam dalam bidang teknologi, mulai dari keamanan siber hingga pengembangan perangkat lunak. Mereka melewati seleksi ketat untuk bergabung dalam komunitas ini.</p>
+    </section>
+    <section>
+        <h2>Kegiatan dan Kontribusi</h2>
+        <p>Hengker aktif dalam berbagai kegiatan, seperti analisis risiko keamanan, pengembangan alat keamanan, dan berkolaborasi dengan pihak berwenang untuk menghadapi ancaman siber.</p>
+    </section>
+    <section>
+        <h2>Penerimaan dan Tantangan</h2>
+        <p>Meskipun tujuannya mulia, Hengker sering kali dihadapkan pada prasangka dan pandangan skeptis dari masyarakat. Tantangan mereka adalah membuktikan etika dan tujuan yang kuat dalam setiap tindakan mereka.</p>
+    </section>
+    <section>
+        <h2>Kesimpulan</h2>
+        <p>Komunitas Hengker adalah contoh bagaimana teknologi dan etika dapat berjalan seiring. Mereka membawa kesadaran akan risiko keamanan digital dan berkontribusi pada perlindungan terhadap dunia maya yang semakin kompleks.</p>
+    </section>
+</body>
+</html>
+
+<style>
+    body{
+        background-image: url('bg.jpg');
+        background-size: cover;
+        color: whitesmoke;
+        animation: ganti 5s infinite;
+    }
+    .navigasi{
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    top: 0;
+    left: 0;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 12px;
+}
+
+.tombol{
+    border: 2px solid lightseagreen;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    color: lightseagreen;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 13px #00f;
+    animation: tombol 2s infinite;
+}
+
+.tombol:hover{
+    background-color: lightseagreen;
+    color: white;
+    animation: tombol-hover 2s infinite;
+}
+
+@keyframes tombol{
+    0%{
+        box-shadow: 0 0 13px #00f;
+        border: 2px solid lightskyblue; 
+        color: lightskyblue;
+    }
+    50%{
+        box-shadow: 0 0 13px seagreen;
+        border: 2px solid lightseagreen; 
+        color: lightseagreen;
+    }
+    100%{
+        box-shadow: 0 0 13px #00f;
+        border: 2px solid lightskyblue; 
+        color: lightskyblue;
+    }
+}
+
+@keyframes tombol-hover{
+    0%{
+        background-color: lightskyblue;
+    }
+    50%{
+        background-color: lightseagreen;
+    }
+    100%{
+        background-color: lightskyblue;
+    }
+}
+
+@keyframes ganti{
+    0%{
+        color: whitesmoke;
+    }
+    50%{
+        color: lightgrey;
+    }
+    100%{
+        color: white;
+    }
+}
+</style>
+
+<script>
+document.getElementById('ilang').addEventListener('click', function() {
+  window.close();
+});
+</script>

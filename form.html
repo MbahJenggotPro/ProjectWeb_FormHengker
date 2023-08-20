@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran</title>
+</head>
+
+<body>
+    <div class="video">
+        <video autoplay muted loop>
+            <source src="form.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="form">
+        <form id="formulir" action="done.html">
+            <h1 style="margin-bottom: 0;text-align: center;">Formulir</h1>
+            <p style="margin-top: 10px;text-align: center;font-size: 12px;margin-bottom: 25px;">Isi formulir di bawah
+                ini untuk pengajuan pendaftaran</p>
+            <label for="name">Nama Lengkap:</label>
+            <input type="text" id="name" placeholder="Masukkan Nama Lengkap" class="input" required>
+
+            <label for="gender">Jenis Kelamin:</label>
+            <select id="gender">
+                <option value="Pria">Pria</option>
+                <option value="Wanita">Wanita</option>
+            </select>
+
+            <label for="work">Pekerjaan:</label>
+            <input type="text" id="work" placeholder="Pekerjaan" class="input">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="email@mail.com" class="input" required>
+
+            <label for="nickname">Nama Panggilan:</label>
+            <input type="text" id="nickname" placeholder="Nama Panggilan" class="input" required>
+
+            <label for="level">Pilih Tingkatanmu:</label>
+            <select id="level" name="level">
+                <option value="Pemula">Pemula</option>
+                <option value="Biasa">Lumayan bisa</option>
+                <option value="Master">Profesional</option>
+                <option value="Dewa">Calvin Rega</option>
+            </select>
+
+            <label for="alasan">Alasan bergabung:</label>
+            <textarea id="alasan" cols="200" rows="200" placeholder="(Opsional)" style="padding-top: 10px;"></textarea>
+
+            <label for="password">Kode Akses:</label>
+            <input type="password" id="Password" placeholder="Masukkan kode akses" required>
+
+            <button type="submit" id="button" onclick="save()" value="Submit">Kirimkan</button>
+        </form>
+    </div>
+</body>
+
+</html>
+
+<style>
+    .video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .form {
+        margin: 100px auto;
+        width: 400px;
+        padding: 20px;
+        background-color: rgba(255, 255, 250, 0.75);
+        border: 1px solid lightblue;
+        border-radius: 15px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-bottom: 10px;
+    }
+
+    input,
+    select,
+    textarea {
+        margin-bottom: 20px;
+        background-color: rgba(169, 169, 169, 0.1);
+        border: 1px solid black;
+        border-radius: 10px;
+        height: 25px;
+        padding-left: 10px;
+    }
+
+    textarea {
+        resize: none;
+        width: 380px;
+        height: 80px;
+    }
+
+    #button {
+        background-color: transparent;
+        border: 2px solid black;
+        border-radius: 15px;
+        color: black;
+        height: 30px;
+        margin-bottom: 20px;
+    }
+
+    #button:hover {
+        background-color: black;
+        color: white;
+    }
+</style>
+<script>
+    function save() {
+        var name = document.getElementById('name').value;
+        var level = document.getElementById('level').value;
+        var nickname = document.getElementById('nickname').value;
+        var email = document.getElementById('email').value;
+
+        if (name.trim() === '' || level.trim() === '' || nickname.trim() === '' || email.trim() === '') {
+            alert('Mohon isi semua field yang diperlukan');
+            return false;
+        }
+
+        localStorage.setItem('Savenama', name);
+        localStorage.setItem('Savetingkat', level);
+        localStorage.setItem('Savepanggilan', nickname);
+        localStorage.setItem('Saveemail', email);
+
+        return true;
+    }
+</script>

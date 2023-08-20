@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.background{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.background h1{
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f, 0 0 50px #00f, 0 0 60px #00f;
+    animation: jedag-jedug 1s infinite;
+}
+
+@keyframes jedag-jedug {
+  0% {
+    text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f, 0 0 50px #00f, 0 0 60px #00f;
+  }
+  20% {
+    text-shadow: none;
+  }
+  25% {
+    text-shadow: 0 0 10px blueviolet, 0 0 20px blueviolet, 0 0 30px blueviolet, 0 0 40px blueviolet, 0 0 50px blueviolet, 0 0 60px blueviolet;
+  }
+  40% {
+    text-shadow: none;
+  }
+  45% {
+    text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f, 0 0 50px #00f, 0 0 60px #00f;
+  }
+  60% {
+    text-shadow: none;
+  }
+  65% {
+    text-shadow: 0 0 10px blueviolet, 0 0 20px blueviolet, 0 0 30px blueviolet, 0 0 40px blueviolet, 0 0 50px blueviolet, 0 0 60px blueviolet;
+  }
+  80% {
+    text-shadow: none;
+  }
+  85% {
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+.navigasi{
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    top: 0;
+    left: 0;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 12px;
+}
+
+.tombol{
+    border: 2px solid lightseagreen;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    color: lightseagreen;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 13px #00f;
+    animation: tombol 2s infinite;
+}
+
+.tombol:hover{
+    background-color: lightseagreen;
+    color: white;
+    animation: tombol-hover 2s infinite;
+}
+
+@keyframes tombol{
+    0%{
+        box-shadow: 0 0 13px #00f;
+        border: 2px solid lightskyblue; 
+        color: lightskyblue;
+    }
+    50%{
+        box-shadow: 0 0 13px seagreen;
+        border: 2px solid lightseagreen; 
+        color: lightseagreen;
+    }
+    100%{
+        box-shadow: 0 0 13px #00f;
+        border: 2px solid lightskyblue; 
+        color: lightskyblue;
+    }
+}
+
+@keyframes tombol-hover{
+    0%{
+        background-color: lightskyblue;
+    }
+    50%{
+        background-color: lightseagreen;
+    }
+    100%{
+        background-color: lightskyblue;
+    }
+}

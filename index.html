@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <audio autoplay loop id="musik">
+        <source src="musik.mp3" type="audio/mp3">
+    </audio>
+    <div class="background">
+        <video autoplay muted loop>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <nav class="navigasi">
+            <a href="index.html" class="tombol">Home</a>
+            <a href="about.html" class="tombol" target="_blank">About</a>
+            <a href="form.html" class="tombol" target="_blank">Daftar</a>
+        </nav>
+        <h1 id="text"></h1>
+    </div>
+</body>
+</html>
+
+<script>
+    var text = "WELCOME TO KOMUNITAS HENGKER";
+    var i = 0;
+    var speed = 120;
+
+    function animasiKetik(){
+        if(i<text.length){
+            document.getElementById("text").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(animasiKetik,speed)
+        }
+    }
+    animasiKetik()
+
+    var audio = document.getElementById('musik');
+    sessionStorage.setItem('musicPlaybackTime', audio.currentTime);
+</script>
